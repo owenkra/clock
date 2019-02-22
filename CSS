@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+$orange: #F68657;
+$green: #70bd63;
+$bg: #f8c985;
+$maroon: #800000;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing:border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body  {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $bg;
+}
+
+.clock {
+	background: $orange;
+	width: 50vmin;
+	height: 50vmin;
+	border-radius: 50%;
+	position: relative;
+  padding: 20px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: lighten($maroon, 10);
+}
+
+.middle1 {
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 5%;
+	height: 5%;
+	background: darken($orange, 8);
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.middle {
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 5%;
+	height: 5%;
+	background: darken($orange, 10);
+	border-radius: 50%;
+
+}
+
+.hour {
+	position: absolute;
+	margin: auto;
+	left: 49%;
+	bottom: 50%;
+	background: darken($orange, 30);
+	width: 2%;
+	height: 40%;
+	transform: rotate(0);
+	transform-origin: 50% 100%;
+}
+
+.minute {
+	@extend .hour;
+	transform: rotate(0);
+	height: 48%;
+	background: darken($orange, 20);
+}
+
+.second {
+	@extend .hour;
+	background: lighten($orange, 10);
+	width: 1%;
+	left: 49.5%;
+	transform: rotate(0);
+	height: 48%;
+}
+.helperButton{
+  position: relative;
+  background: lighten($maroon, 10);
+  width: 250px;
+  height: 50px;
+  left:110px;
+  
+}
